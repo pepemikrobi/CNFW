@@ -1,0 +1,70 @@
+---
+
+common:
+  transfer_hostname: "10.11.1.1{{ '%02d' % pod_no | int }}" 
+
+dhcp_hosts:
+  # PODX DC1
+  - hostname: POD{{ pod_no }}_LEAF11 
+    mac_address: "02:ca:fe:0{{ pod_no | int }}:11:09"
+    fixed_address: "10.11.10{{ pod_no | int }}.111"
+    gateway: "10.11.10{{ pod_no | int }}.254"
+    password: 'Admin{{ pod_no }}sisko$'
+  - hostname: POD{{ pod_no }}_LEAF12 
+    mac_address: "02:ca:fe:0{{ pod_no | int }}:12:09"
+    fixed_address: "10.11.10{{ pod_no | int }}.112"
+    gateway: "10.11.10{{ pod_no | int }}.254"
+    password: 'Admin{{ pod_no }}sisko$'
+  - hostname: POD{{ pod_no }}_SPINE11 
+    mac_address: "02:ca:fe:0{{ pod_no | int }}:13:09"
+    fixed_address: "10.11.10{{ pod_no | int }}.113"
+    gateway: "10.11.10{{ pod_no | int }}.254"
+    password: 'Admin{{ pod_no }}sisko$'
+  - hostname: POD{{ pod_no }}_SPINE12 
+    mac_address: "02:ca:fe:0{{ pod_no | int }}:14:09"
+    fixed_address: "10.11.10{{ pod_no | int }}.114"
+    gateway: "10.11.10{{ pod_no | int }}.254"
+    password: 'Admin{{ pod_no }}sisko$'
+  - hostname: POD{{ pod_no }}_BORDER11
+    mac_address: "02:ca:fe:0{{ pod_no | int }}:15:09"
+    fixed_address: "10.11.10{{ pod_no | int }}.115"
+    gateway: "10.11.10{{ pod_no | int }}.254"
+    password: 'Admin{{ pod_no }}sisko$'
+  - hostname: POD{{ pod_no }}_BORDER12
+    mac_address: "02:ca:fe:0{{ pod_no | int }}:16:09"
+    fixed_address: "10.11.10{{ pod_no | int }}.116"
+    gateway: "10.11.10{{ pod_no | int }}.254"
+    password: 'Admin{{ pod_no }}sisko$'
+      
+  # PODX DC2
+  - hostname: POD{{ pod_no }}_LEAF21 
+    mac_address: "02:ca:fe:0{{ pod_no | int }}:21:09"
+    fixed_address: "10.11.10{{ pod_no | int }}.121"
+    gateway: "10.11.10{{ pod_no | int }}.254"
+    password: 'Admin{{ pod_no }}sisko$'
+  - hostname: POD{{ pod_no }}_LEAF22 
+    mac_address: "02:ca:fe:0{{ pod_no | int }}:22:09"
+    fixed_address: "10.11.10{{ pod_no | int }}.122"
+    gateway: "10.11.10{{ pod_no | int }}.254"
+    password: 'Admin{{ pod_no }}sisko$'
+  - hostname: POD{{ pod_no }}_SPINE21 
+    mac_address: "02:ca:fe:0{{ pod_no | int }}:23:09"
+    fixed_address: "10.11.10{{ pod_no | int }}.123"
+    gateway: "10.11.10{{ pod_no | int }}.254"
+    password: 'Admin{{ pod_no }}sisko$'
+  - hostname: POD{{ pod_no }}_SPINE22 
+    mac_address: "02:ca:fe:0{{ pod_no | int }}:24:09"
+    fixed_address: "10.11.10{{ pod_no | int }}.124"
+    gateway: "10.11.10{{ pod_no | int }}.254"
+    password: 'Admin{{ pod_no }}sisko$'
+  - hostname: POD{{ pod_no }}_BORDER21
+    mac_address: "02:ca:fe:0{{ pod_no | int }}:25:09"
+    fixed_address: "10.11.10{{ pod_no | int }}.125"
+    gateway: "10.11.10{{ pod_no | int }}.254"
+    password: 'Admin{{ pod_no }}sisko$'
+  - hostname: POD{{ pod_no }}_BORDER22
+    mac_address: "02:ca:fe:0{{ pod_no | int }}:26:09"
+    fixed_address: "10.11.10{{ pod_no | int }}.126"
+    gateway: "10.11.10{{ pod_no | int }}.254"
+    password: 'Admin{{ pod_no }}sisko$'
+
