@@ -1,12 +1,13 @@
 vcsa_hostname = "vcenter.sdn.lab"
 #vcsa_username = "podX-admin@hector.lan"
-#esxi_hostname = "10.16.1.44"
+#esxi_hostname = "podX-esxY.sdn.lab"
+#esxi_datastore = "podX-esxY-ds1"
 
 pod = X
 
 switch_data = {
   # DC1
-  LEAF11 = {
+  /*LEAF11 = {
     name = "PODX_LEAF11"
     index = 11
     serial_port = "2X11"
@@ -59,7 +60,7 @@ switch_data = {
     eth2 = "2X18"
     eth3 = "2X19"
     eth4 = "2X05"
-  }
+  }*/
   
   # DC2
   /*LEAF21 = {
@@ -119,7 +120,7 @@ switch_data = {
 }
 
 server_data = {
-/*  # DC1
+  # DC1
   SRV11 = {
     name = "podX-srv11"
     index = 18
@@ -132,7 +133,7 @@ server_data = {
   }
 
   # DC2
-  SRV21 = {
+  /*SRV21 = {
     name = "podX-srv21"
     index = 28
     ens224 = "2X41"
@@ -153,8 +154,10 @@ portgroup_data = {
   "2X44" = "PODX_LEAF22_UNUSED"
   "2X41" = "PODX_SRV21_LEAF21"
   "2X42" = "PODX_SRV22_LEAF22"
+
   "2X04" = "PODX_BORDER11_BORDER21"
   "2X05" = "PODX_BORDER12_BORDER22"
+
   "2X11" = "PODX_SPINE11_LEAF11"
   "2X12" = "PODX_SPINE11_LEAF12"
   "2X13" = "PODX_SPINE12_LEAF11"
@@ -163,6 +166,18 @@ portgroup_data = {
   "2X16" = "PODX_SPINE11_BORDER12"
   "2X17" = "PODX_SPINE12_BORDER11"
   "2X18" = "PODX_SPINE12_BORDER12"
+  "2X19" = "PODX_BORDER11_BORDER12"
+  "2X29" = "PODX_BORDER21_BORDER22"
+
+  "2X21" = "PODX_SPINE21_LEAF21"
+  "2X22" = "PODX_SPINE21_LEAF22"
+  "2X23" = "PODX_SPINE22_LEAF21"
+  "2X24" = "PODX_SPINE22_LEAF22"
+  "2X25" = "PODX_SPINE21_BORDER21"
+  "2X26" = "PODX_SPINE21_BORDER22"
+  "2X27" = "PODX_SPINE22_BORDER21"
+  "2X28" = "PODX_SPINE22_BORDER22"
+
   "2X19" = "PODX_BORDER11_BORDER12"
   "2X29" = "PODX_BORDER21_BORDER22"
 }

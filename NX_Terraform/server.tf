@@ -1,7 +1,7 @@
 # Deploy fabric servers
 
 data "vsphere_virtual_machine" "server_template" {
-  name          = "ubuntu22"
+  name          = format("pod%s-ubuntu", var.pod)
   datacenter_id = data.vsphere_datacenter.datacenter.id
 }
 
@@ -77,7 +77,7 @@ resource "vsphere_virtual_machine" "server" {
       type     = "ssh"
       user     = "pod"
       password = "Adminsisko$"
-      host     = vsphere_virtual_machine.server[each.key].clone.0.customize.0.network_interface.0.ipv4_address
+      host     = self.clone.0.customize.0.network_interface.0.ipv4_address
     }
   }
 
