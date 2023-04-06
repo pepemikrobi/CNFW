@@ -11,7 +11,7 @@ data "vsphere_datastore" "datastore" {
 }
 
 data "vsphere_virtual_machine" "template" {
-  name          = format("pod%s_n9300v_scsi_thin", var.pod)
+  name          = format("pod%s_n9300v_10.2.5_scsi_thin", var.pod)
   datacenter_id = data.vsphere_datacenter.datacenter.id
 }
 
