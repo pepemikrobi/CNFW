@@ -22,7 +22,7 @@
 
 - name: Copy POAP script to TFTP folder
   template:
-    src=poap_nexus_script.j2
+    src=poap_nexus_script_10.j2
     dest=/tftpboot/poap_nexus_script.py
     owner=root
     group=root
