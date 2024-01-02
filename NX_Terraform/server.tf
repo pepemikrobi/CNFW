@@ -50,7 +50,7 @@ resource "vsphere_virtual_machine" "server" {
 
   # ens160
   network_interface {
-    network_id   = data.vsphere_network.net_mgmt.id
+    network_id   = data.vsphere_network.dc1_net_mgmt.id
     adapter_type = data.vsphere_virtual_machine.server_template.network_interface_types[0]
     use_static_mac = true
     mac_address  = format("02:ca:fe:0%s:%s:00", var.pod, each.value["index"])
