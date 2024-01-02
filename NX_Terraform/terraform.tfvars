@@ -5,7 +5,7 @@ vcsa_hostname = "vcenter.sdn.lab"
 
 pod = X
 
-switch_data = {
+dc1_switch_data = {
   # DC1
   /*LEAF11 = {
     name = "PODX_LEAF11"
@@ -61,7 +61,9 @@ switch_data = {
     eth3 = "2X19"
     eth4 = "2X05"
   }*/
-  
+}
+
+dc2_switch_data = {
   # DC2
   /*LEAF21 = {
     name = "PODX_LEAF21"

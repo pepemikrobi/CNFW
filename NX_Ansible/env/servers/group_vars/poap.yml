@@ -39,32 +39,32 @@ dhcp_hosts:
   # PODX DC2
   - hostname: POD{{ pod_no }}_LEAF21 
     mac_address: "02:ca:fe:0{{ pod_no | int }}:21:09"
-    fixed_address: "10.11.10{{ pod_no | int }}.121"
-    gateway: "10.11.10{{ pod_no | int }}.254"
+    fixed_address: "10.11.20{{ pod_no | int }}.221"
+    gateway: "10.11.20{{ pod_no | int }}.254"
     password: 'Admin{{ pod_no }}sisko$'
   - hostname: POD{{ pod_no }}_LEAF22 
     mac_address: "02:ca:fe:0{{ pod_no | int }}:22:09"
-    fixed_address: "10.11.10{{ pod_no | int }}.122"
-    gateway: "10.11.10{{ pod_no | int }}.254"
+    fixed_address: "10.11.20{{ pod_no | int }}.222"
+    gateway: "10.11.20{{ pod_no | int }}.254"
     password: 'Admin{{ pod_no }}sisko$'
   - hostname: POD{{ pod_no }}_SPINE21 
     mac_address: "02:ca:fe:0{{ pod_no | int }}:23:09"
-    fixed_address: "10.11.10{{ pod_no | int }}.123"
-    gateway: "10.11.10{{ pod_no | int }}.254"
+    fixed_address: "10.11.20{{ pod_no | int }}.223"
+    gateway: "10.11.20{{ pod_no | int }}.254"
     password: 'Admin{{ pod_no }}sisko$'
   - hostname: POD{{ pod_no }}_SPINE22 
     mac_address: "02:ca:fe:0{{ pod_no | int }}:24:09"
-    fixed_address: "10.11.10{{ pod_no | int }}.124"
-    gateway: "10.11.10{{ pod_no | int }}.254"
+    fixed_address: "10.11.20{{ pod_no | int }}.224"
+    gateway: "10.11.20{{ pod_no | int }}.254"
     password: 'Admin{{ pod_no }}sisko$'
   - hostname: POD{{ pod_no }}_BORDER21
     mac_address: "02:ca:fe:0{{ pod_no | int }}:25:09"
-    fixed_address: "10.11.10{{ pod_no | int }}.125"
-    gateway: "10.11.10{{ pod_no | int }}.254"
+    fixed_address: "10.11.20{{ pod_no | int }}.225"
+    gateway: "10.11.20{{ pod_no | int }}.254"
     password: 'Admin{{ pod_no }}sisko$'
   - hostname: POD{{ pod_no }}_BORDER22
     mac_address: "02:ca:fe:0{{ pod_no | int }}:26:09"
-    fixed_address: "10.11.10{{ pod_no | int }}.126"
-    gateway: "10.11.10{{ pod_no | int }}.254"
+    fixed_address: "10.11.20{{ pod_no | int }}.226"
+    gateway: "10.11.20{{ pod_no | int }}.254"
     password: 'Admin{{ pod_no }}sisko$'
 

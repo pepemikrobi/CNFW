@@ -17,11 +17,18 @@ subnet 10.11.1{{ '%02d' % pod_no | int }}.0 netmask 255.255.255.0 {
   option domain-name "sdn.lab";
 }
 
+subnet 10.11.2{{ '%02d' % pod_no | int }}.0 netmask 255.255.255.0 {
+  range 10.11.2{{ '%02d' % pod_no | int }}.200 10.11.2{{ '%02d' % pod_no | int }}.219;
+  option routers 10.11.2{{ '%02d' % pod_no | int }}.254;
+  option domain-name-servers 10.16.2.3,10.16.2.6;
+  option domain-name "sdn.lab";
+}
+
 {% for item in dhcp_hosts %}
 host {{item.hostname}} {
     hardware ethernet {{ item.mac_address }};
     fixed-address {{ item.fixed_address }};
-    option routers 10.11.1{{ '%02d' % pod_no | int }}.254;
+    option routers {{item.gateway}};
     option host-name "{{item.hostname}}";
     option bootfile-name "poap_nexus_script.py";
     option tftp-server-address 10.11.1.1{{ '%02d' % pod_no | int }};
