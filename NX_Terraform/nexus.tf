@@ -16,12 +16,12 @@ data "vsphere_virtual_machine" "template" {
 }
 
 data "vsphere_network" "dc1_net_mgmt" {
-  name          = format("(11%02s) RSL_DCLAB_1%02s", var.pod, var.pod)
+  name          = format("(11%02s) RSL_POD%s_DC1", var.pod, var.pod)
   datacenter_id = data.vsphere_datacenter.datacenter.id
 }
 
 data "vsphere_network" "dc2_net_mgmt" {
-  name          = format("(12%02s) RSL_DCLAB_2%02s", var.pod, var.pod)
+  name          = format("(12%02s) RSL_POD%s_DC2", var.pod, var.pod)
   datacenter_id = data.vsphere_datacenter.datacenter.id
 }
 
